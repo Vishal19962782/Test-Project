@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+
+import SideBar from "./SideBar/SideBar";
+import { Grid } from "@material-ui/core";
+import { Stack } from "@mui/material";
+import MainHeader from "./components/HEADER/MainHeader";
+import Subheader from "./components/HEADER/Subheader";
+import FolderComponent from "./components/CodeComponent/FolderComponent";
+import CodeEditor from "./components/CodeEditor/CodeEditor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Stack direction>
+      <SideBar />
+      <Grid container>
+        <Grid item lg={12}>
+          <MainHeader />
+          <Subheader />
+        </Grid>
+        <Grid item lg={2}>
+          <FolderComponent />
+        </Grid>
+        <Grid container item lg={12} justifyContent="center">
+          <Grid item lg={9} >
+            <CodeEditor />
+          </Grid>
+        </Grid>
+      </Grid>
+    </Stack>
   );
 }
 
