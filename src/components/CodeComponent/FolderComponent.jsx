@@ -21,7 +21,7 @@ function FolderComponent() {
     <Stack
       sx={{
       
-        minHeight: "55vh",
+        minHeight: "52vh",
         width:"15%",
         backgroundColor: "#FFFFFF",
       }}

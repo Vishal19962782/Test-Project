@@ -17,7 +17,7 @@ function CodeEditor() {
         value={code}
         onChange={(value) => setCode(value)}
         width="100%"
-        height="55vh"
+        height="52vh"
         extensions={[sql()]}
         options={{
           theme: "dracula",

@@ -9,7 +9,10 @@ import FolderComponent from "./components/CodeComponent/FolderComponent";
 import CodeEditor from "./components/CodeEditor/CodeEditor";
 import Table from "./components/Table/BasicTable";
 
+import { useContext } from "react";
+import TableContext from "./Context/tableContext";
 function App() {
+  const [table, setTable] = useContext(TableContext);
   return (
     <Stack direction justifyContent={"center"}>
       <SideBar />
@@ -27,7 +30,7 @@ function App() {
           <CodeEditor />
         </Stack>
         <Stack sx={{ width: "100%", height: "33vh" }}>
-          <Table />
+         {table.length!==0? <Table />:null}
         </Stack>
       </Container>
     </Stack>
