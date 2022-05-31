@@ -6,34 +6,23 @@ import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 import FolderIcon from "@mui/icons-material/Folder";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 function FolderComponent() {
-  const [data, setData] = useState([
-    {
-      schema: "Customer",
-      tables: ["customer", "address"],
-      views: ["customer_vw", "address_vs"],
-    },
-    {
-      schema: "Sales",
-      tables: ["sales", "city", "target"],
-      views: ["sales_vw", "customer_sales", "city_total"],
-    },
-  ]);
-  //   useEffect(() => {
-  //     axios
-  //       .post("https://dabler.app/api/test/getwarehouseitems", {
-  //         warehouseid: "1",
-  //       })
-  //       .then(({ data }) => {
-  //         setData(data);
-  //         console.log(data);
-  //       });
-  //   }, []);
+  const [data, setData] = useState([]);
+    useEffect(() => {
+      axios
+        .post("https://dabler.app/api/test/getwarehouseitems", {
+          warehouseid: "1",
+        })
+        .then(({ data }) => {
+          setData(data);
+          console.log(data);
+        });
+    }, []);
   return (
     <Stack
       sx={{
       
-        minHeight: "70vh",
-        width:"90%",
+        minHeight: "55vh",
+        width:"15%",
         backgroundColor: "#FFFFFF",
       }}
     >

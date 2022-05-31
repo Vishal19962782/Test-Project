@@ -1,37 +1,81 @@
+
 import { Avatar, Box, ListItem, Typography } from '@material-ui/core'
-import { List, Stack } from '@mui/material'
+import { List, ListItemIcon, Stack } from '@mui/material'
+import { styled } from '@mui/system'
 import React from 'react'
 
+const StyledText = styled(Typography)({
+  color: '#fff',
+  margin: '0px',
+
+})
+const StyledListItem = styled(ListItem)({
+  height: "60px",
+  display: 'flex',
+  gap: '10px',
+  justifyContent: 'flex-start',
+})
 function SideBar() {
   return (
-    <Box style={{ maxWidth: "190px", minHeight: "100vh", border: "1px solid black" }}>
-      <Stack>
-        <Box>
-          <Stack sx={{ backgroundColor: "#26C0E2" }} justifyContent={'center'} alignItems='center'>
-            <img width={'40px'} src="logo192.png" alt="" />
-            <Typography variant='h6'> Dabbler</Typography>
-            <Typography >Transform</Typography>
+    <Box style={{ minWidth: "200px", minHeight: "100vh", backgroundColor: "#292F36" }}>
+      <Stack sx={{ height: "100vh" }} justifyContent={"space-between"}>
+        <Stack>
+          <Box>
+            <Stack p={1} sx={{ backgroundColor: "#26C0E2" }} justifyContent={'space-between'} alignItems='center'>
+              <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.07072 32.632C1.06532 32.1253 1.1505 31.6244 1.32012 31.1663C1.48973 30.7081 1.73943 30.3046 2.05048 29.9857C2.8755 29.0007 8.66788 21.3941 12.1992 16.7332C12.4402 16.4106 12.7296 16.1517 13.0511 15.9713C13.3723 15.7909 13.7192 15.6925 14.0715 15.6819C14.4239 15.6713 30.9203 15.5211 31.2496 15.6819C31.5789 15.8427 36.5349 17.4899 36.7905 17.7975C37.046 18.1051 32.8032 16.8149 31.2495 18.991C33.9859 17.8663 31.2495 18.991 16.8213 18.991C36.7905 17.7975 16.7672 19.8763 16.639 20.2892C16.5107 20.7021 16.3189 21.0785 16.0743 21.3968C16.049 21.4301 13.5055 24.7869 10.9644 28.1189L10.1679 29.1629L22.7191 29.0211C27.6001 28.966 31.3184 25.0915 31.2495 18.991C31.1806 12.8906 27.3503 6.83947 22.4692 6.89459L16.4551 7.10932C15.7464 7.11732 15.0627 6.77025 14.5545 6.14446C14.0463 5.51868 13.7552 4.66542 13.7451 3.77242C13.735 2.87941 14.0068 2.01982 14.5007 1.38271C14.9947 0.745601 15.6704 0.383181 16.3791 0.375178L22.3932 0.160446C30.2211 0.072043 36.6797 7.98394 36.7905 17.7975C36.9014 27.6109 30.6231 35.6668 22.7951 35.7552L3.78105 35.9699C3.07237 35.9775 2.38867 35.6303 1.8803 35.0043C1.37209 34.3784 1.08096 33.5251 1.07072 32.632Z" fill="#FEFFFF" />
+                <path d="M0.0562368 14.0587C0.0872436 16.8043 1.84527 19.0104 3.98303 18.9863C6.12076 18.9621 7.8286 16.7169 7.7976 13.9713C7.76659 11.2257 6.00848 9.01957 3.87074 9.04371C1.73299 9.06786 0.02523 11.3132 0.0562368 14.0587Z" fill="white" />
+              </svg>
+              <StyledText sx={{ fontWeight: "light" }} variant='h6'> DABLER</StyledText>
+              <Typography style={{ color: '#706767', fontSize: "15px" }} >Transform</Typography>
+            </Stack>
+          </Box>
+          <Box display={"flex"} justifyContent="center">
+            <List sx={{ pl: "20px", backgroundColor: "#292F36", gap: "30px" }}>
+              <StyledListItem>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54 2H7.92C9.33 2 10.46 3.15 10.46 4.561V7.97C10.46 9.39 9.33 10.53 7.92 10.53H4.54C3.14 10.53 2 9.39 2 7.97V4.561C2 3.15 3.14 2 4.54 2ZM4.54 13.4697H7.92C9.33 13.4697 10.46 14.6107 10.46 16.0307V19.4397C10.46 20.8497 9.33 21.9997 7.92 21.9997H4.54C3.14 21.9997 2 20.8497 2 19.4397V16.0307C2 14.6107 3.14 13.4697 4.54 13.4697ZM19.4601 2H16.0801C14.6701 2 13.5401 3.15 13.5401 4.561V7.97C13.5401 9.39 14.6701 10.53 16.0801 10.53H19.4601C20.8601 10.53 22.0001 9.39 22.0001 7.97V4.561C22.0001 3.15 20.8601 2 19.4601 2ZM16.0801 13.4697H19.4601C20.8601 13.4697 22.0001 14.6107 22.0001 16.0307V19.4397C22.0001 20.8497 20.8601 21.9997 19.4601 21.9997H16.0801C14.6701 21.9997 13.5401 20.8497 13.5401 19.4397V16.0307C13.5401 14.6107 14.6701 13.4697 16.0801 13.4697Z" fill="white" />
+                </svg>
+                <StyledText color='background.primary' variant='h7'>Dashboard</StyledText>
+              </StyledListItem>
+              <StyledListItem>
+                <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81 0H13.191C16.28 0 18 1.78 18 4.83V15.16C18 18.26 16.28 20 13.191 20H4.81C1.77 20 0 18.26 0 15.16V4.83C0 1.78 1.77 0 4.81 0ZM5.08 4.66V4.65H8.069C8.5 4.65 8.85 5 8.85 5.429C8.85 5.87 8.5 6.22 8.069 6.22H5.08C4.649 6.22 4.3 5.87 4.3 5.44C4.3 5.01 4.649 4.66 5.08 4.66ZM5.08 10.74H12.92C13.35 10.74 13.7 10.39 13.7 9.96C13.7 9.53 13.35 9.179 12.92 9.179H5.08C4.649 9.179 4.3 9.53 4.3 9.96C4.3 10.39 4.649 10.74 5.08 10.74ZM5.08 15.31H12.92C13.319 15.27 13.62 14.929 13.62 14.53C13.62 14.12 13.319 13.78 12.92 13.74H5.08C4.78 13.71 4.49 13.85 4.33 14.11C4.17 14.36 4.17 14.69 4.33 14.95C4.49 15.2 4.78 15.35 5.08 15.31Z" fill="white" />
+                </svg>
+                <StyledText color='background.primary' variant='h7'>Projects</StyledText>
+              </StyledListItem>
+              <StyledListItem>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 17H9C10.6569 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 11.1213 4.87868C10.2426 4 8.82843 4 6 4H5C4.05719 4 3.58579 4 3.29289 4.29289C3 4.58579 3 5.05719 3 6V15C3 15.9428 3 16.4142 3.29289 16.7071C3.58579 17 4.05719 17 5 17Z" stroke="#CCD2E3" stroke-width="2" />
+                  <path d="M19 17H15C13.3431 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 12.8787 4.87868C13.7574 4 15.1716 4 18 4H19C19.9428 4 20.4142 4 20.7071 4.29289C21 4.58579 21 5.05719 21 6V15C21 15.9428 21 16.4142 20.7071 16.7071C20.4142 17 19.9428 17 19 17Z" stroke="#CCD2E3" stroke-width="2" />
+                </svg>
+                <StyledText color='background.primary' variant='h7'>Dictionary</StyledText>
+              </StyledListItem>
+              <StyledListItem>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.44784 8.96942C6.76219 6.14032 9.15349 4 12 4V4C14.8465 4 17.2378 6.14032 17.5522 8.96942L17.804 11.2356C17.8072 11.2645 17.8088 11.279 17.8104 11.2933C17.9394 12.4169 18.3051 13.5005 18.8836 14.4725C18.8909 14.4849 18.8984 14.4973 18.9133 14.5222L19.4914 15.4856C20.0159 16.3599 20.2782 16.797 20.2216 17.1559C20.1839 17.3946 20.061 17.6117 19.8757 17.7668C19.5971 18 19.0873 18 18.0678 18H5.93223C4.91268 18 4.40291 18 4.12434 17.7668C3.93897 17.6117 3.81609 17.3946 3.77841 17.1559C3.72179 16.797 3.98407 16.3599 4.50862 15.4856L5.08665 14.5222C5.10161 14.4973 5.10909 14.4849 5.11644 14.4725C5.69488 13.5005 6.06064 12.4169 6.18959 11.2933C6.19123 11.279 6.19283 11.2645 6.19604 11.2356L6.44784 8.96942Z" stroke="white" />
+                  <path d="M9.10222 18.4059C9.27315 19.1501 9.64978 19.8077 10.1737 20.2767C10.6976 20.7458 11.3396 21 12 21C12.6604 21 13.3024 20.7458 13.8263 20.2767C14.3502 19.8077 14.7269 19.1501 14.8978 18.4059" stroke="white" stroke-linecap="round" />
+                </svg>
+                <StyledText color='background.primary' variant='h7'>Incidents</StyledText>
+              </StyledListItem>
+              <StyledListItem>
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9023 11.58C18.26 11.77 18.536 12.07 18.7301 12.37C19.1083 12.99 19.0776 13.75 18.7097 14.42L17.9943 15.62C17.6162 16.26 16.911 16.66 16.1855 16.66C15.8278 16.66 15.4292 16.56 15.1022 16.36C14.8365 16.19 14.5299 16.13 14.2029 16.13C13.1911 16.13 12.3429 16.96 12.3122 17.95C12.3122 19.1 11.372 20 10.1968 20H8.80692C7.62145 20 6.68125 19.1 6.68125 17.95C6.66081 16.96 5.81259 16.13 4.80085 16.13C4.46361 16.13 4.15702 16.19 3.90153 16.36C3.5745 16.56 3.16572 16.66 2.81825 16.66C2.08245 16.66 1.37729 16.26 0.99917 15.62L0.29402 14.42C-0.0841044 13.77 -0.104544 12.99 0.273581 12.37C0.437094 12.07 0.743681 11.77 1.09115 11.58C1.37729 11.44 1.56125 11.21 1.73498 10.94C2.24596 10.08 1.93937 8.95 1.07071 8.44C0.0589696 7.87 -0.268057 6.6 0.314459 5.61L0.99917 4.43C1.59191 3.44 2.85913 3.09 3.88109 3.67C4.77019 4.15 5.925 3.83 6.4462 2.98C6.60972 2.7 6.70169 2.4 6.68125 2.1C6.66081 1.71 6.77323 1.34 6.9674 1.04C7.34553 0.42 8.03024 0.02 8.77627 0H10.2172C10.9735 0 11.6582 0.42 12.0363 1.04C12.2203 1.34 12.3429 1.71 12.3122 2.1C12.2918 2.4 12.3838 2.7 12.5473 2.98C13.0685 3.83 14.2233 4.15 15.1226 3.67C16.1344 3.09 17.4118 3.44 17.9943 4.43L18.679 5.61C19.2718 6.6 18.9447 7.87 17.9228 8.44C17.0541 8.95 16.7475 10.08 17.2687 10.94C17.4322 11.21 17.6162 11.44 17.9023 11.58ZM6.60972 10.01C6.60972 11.58 7.9076 12.83 9.51208 12.83C11.1165 12.83 12.3838 11.58 12.3838 10.01C12.3838 8.44 11.1165 7.18 9.51208 7.18C7.9076 7.18 6.60972 8.44 6.60972 10.01Z" fill="white" />
+                </svg>
+                <StyledText color='background.primary' variant='h7'>Manage</StyledText>
+              </StyledListItem>
+            </List>
+          </Box>
+        </Stack>
+        <Stack sx={{ padding: "15px" }}>
+          <Stack direction gap="10px">
+            <img width="50px" src='https://bit.ly/dan-abramov' />
+            <Stack>
+              <StyledText sx={{ color: "#FFFFFF" }} variant='h8'>User Name</StyledText>
+              <StyledText sx={{ color: "#FFFFFF" }} variant='h8'>AWS_DEV</StyledText>
+            </Stack>
           </Stack>
-        </Box>
-        <Box>
-          <List sx={{ backgroundColor: "#292F36" }}>
-            <ListItem>
-              <Typography color='background.primary' variant='h6'>Dashboard</Typography>
-            </ListItem>
-            <ListItem>
-              <Typography color='background.primary' variant='h6'>Projects</Typography>
-            </ListItem>
-            <ListItem>
-              <Typography color='background.primary' variant='h6'>Dictionary</Typography>
-            </ListItem>
-            <ListItem>
-              <Typography color='background.primary' variant='h6'>Incidents</Typography>
-            </ListItem>
-            <ListItem>
-              <Typography color='background.primary' variant='h6'>Manage</Typography>
-            </ListItem>
-          </List>
-        </Box>
+        </Stack>
       </Stack>
     </Box>
   )

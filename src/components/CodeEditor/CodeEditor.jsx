@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import "codemirror/keymap/sublime";
 import "codemirror/theme/monokai.css";
 import "codemirror/theme/dracula.css";
-import { sql } from '@codemirror/lang-sql'
+import { sql } from "@codemirror/lang-sql";
+import { Container } from "@material-ui/core";
+import { oneDark } from "@codemirror/theme-one-dark";
+import CodeContext from "../../Context/CodeContext";
+
+// import {monokai} from "@codemirror/theme-monokai"
 function CodeEditor() {
+  const [code,setCode] = useContext(CodeContext);
   return (
-    <CodeMirror
-    width="95%"
-      height="70vh"
-      extensions={[sql()]}
-      options={{
-        theme: "dracula",
-        keyMap: "submlime",
-      }}
-    />
+    <Container>
+      <CodeMirror
+        value={code}
+        onChange={(value) => setCode(value)}
+        width="100%"
+        height="55vh"
+        extensions={[sql()]}
+        options={{
+          theme: "dracula",
+          keyMap: "submlime",
+        }}
+      />
+    </Container>
   );
 }
 
