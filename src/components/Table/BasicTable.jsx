@@ -9,10 +9,6 @@ import Paper from "@mui/material/Paper";
 import TableContext from "../../Context/tableContext";
 import { Box } from "@mui/material";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
 
 export default function BasicTable({ data }) {
   const [table, setTable] = React.useContext(TableContext);
@@ -30,11 +26,6 @@ export default function BasicTable({ data }) {
                 </TableCell>
               );
             })}
-            {/* <TableCell align="left">Name</TableCell>
-            <TableCell align="left">E-mail</TableCell>
-            <TableCell align="left">Permission</TableCell>
-            <TableCell align="left">Created Date</TableCell>
-            <TableCell align="left">Action</TableCell> */}
           </TableRow>
         </TableHead>
         <TableBody>

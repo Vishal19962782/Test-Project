@@ -15,6 +15,7 @@ function Subheader() {
   const [code, setCode] = React.useContext(CodeContext);
   const [table, setTable] = React.useContext(TableContext);
   const handleRunCode = () => {
+    setTable([])
     axios
       .post("https://dabler.app/api/test/runquery", {
         query: code,
