@@ -22,6 +22,7 @@ function Subheader() {
       .then(({ data }) => {
         console.log(data);
         setTable(data);
+        setCode('');
       });
   };
   return (
