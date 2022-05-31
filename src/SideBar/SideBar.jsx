@@ -1,19 +1,30 @@
 
-import { Avatar, Box, ListItem, Typography } from '@material-ui/core'
-import { List, ListItemIcon, Stack } from '@mui/material'
+import { Avatar, Box, ListItem, ListItemText, Typography } from '@material-ui/core'
+import { List, ListItemButton, ListItemIcon, Stack } from '@mui/material'
 import { styled } from '@mui/system'
 import React from 'react'
 
 const StyledText = styled(Typography)({
   color: '#fff',
+  fontWeight: '400',
   margin: '0px',
+
 
 })
 const StyledListItem = styled(ListItem)({
-  height: "60px",
+  height: "70px",
   display: 'flex',
   gap: '10px',
   justifyContent: 'flex-start',
+  '&:hover': {
+    backgroundColor: '#26C0E2',
+  }
+
+})
+const StyledListItemButton = styled(ListItemButton)({
+ width: '100%',
+ padding: 0,
+ margin: 0,
 })
 function SideBar() {
   return (
@@ -31,7 +42,75 @@ function SideBar() {
             </Stack>
           </Box>
           <Box display={"flex"} justifyContent="center">
-            <List sx={{ pl: "20px", backgroundColor: "#292F36", gap: "30px" }}>
+
+            <List>
+              <StyledListItem disablePadding>
+                <StyledListItemButton>
+                  <ListItemIcon>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54 2H7.92C9.33 2 10.46 3.15 10.46 4.561V7.97C10.46 9.39 9.33 10.53 7.92 10.53H4.54C3.14 10.53 2 9.39 2 7.97V4.561C2 3.15 3.14 2 4.54 2ZM4.54 13.4697H7.92C9.33 13.4697 10.46 14.6107 10.46 16.0307V19.4397C10.46 20.8497 9.33 21.9997 7.92 21.9997H4.54C3.14 21.9997 2 20.8497 2 19.4397V16.0307C2 14.6107 3.14 13.4697 4.54 13.4697ZM19.4601 2H16.0801C14.6701 2 13.5401 3.15 13.5401 4.561V7.97C13.5401 9.39 14.6701 10.53 16.0801 10.53H19.4601C20.8601 10.53 22.0001 9.39 22.0001 7.97V4.561C22.0001 3.15 20.8601 2 19.4601 2ZM16.0801 13.4697H19.4601C20.8601 13.4697 22.0001 14.6107 22.0001 16.0307V19.4397C22.0001 20.8497 20.8601 21.9997 19.4601 21.9997H16.0801C14.6701 21.9997 13.5401 20.8497 13.5401 19.4397V16.0307C13.5401 14.6107 14.6701 13.4697 16.0801 13.4697Z" fill="white" />
+                    </svg>
+                  </ListItemIcon>
+                  <ListItemText >
+                    <StyledText variant='h7'>Dashboard</StyledText>
+                  </ListItemText>
+                </StyledListItemButton>
+              </StyledListItem>
+              <StyledListItem disablePadding>
+                <StyledListItemButton>
+                  <ListItemIcon>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 17H9C10.6569 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 11.1213 4.87868C10.2426 4 8.82843 4 6 4H5C4.05719 4 3.58579 4 3.29289 4.29289C3 4.58579 3 5.05719 3 6V15C3 15.9428 3 16.4142 3.29289 16.7071C3.58579 17 4.05719 17 5 17Z" stroke="#CCD2E3" stroke-width="2" />
+                      <path d="M19 17H15C13.3431 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 12.8787 4.87868C13.7574 4 15.1716 4 18 4H19C19.9428 4 20.4142 4 20.7071 4.29289C21 4.58579 21 5.05719 21 6V15C21 15.9428 21 16.4142 20.7071 16.7071C20.4142 17 19.9428 17 19 17Z" stroke="#CCD2E3" stroke-width="2" />
+                    </svg>
+                  </ListItemIcon>
+                  <ListItemText >
+                    <StyledText variant='h7'>Projects</StyledText>
+                  </ListItemText>
+                </StyledListItemButton>
+              </StyledListItem>
+              <StyledListItem disablePadding>
+                <StyledListItemButton>
+                  <ListItemIcon>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 17H9C10.6569 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 11.1213 4.87868C10.2426 4 8.82843 4 6 4H5C4.05719 4 3.58579 4 3.29289 4.29289C3 4.58579 3 5.05719 3 6V15C3 15.9428 3 16.4142 3.29289 16.7071C3.58579 17 4.05719 17 5 17Z" stroke="#CCD2E3" stroke-width="2" />
+                      <path d="M19 17H15C13.3431 17 12 18.3431 12 20V10C12 7.17157 12 5.75736 12.8787 4.87868C13.7574 4 15.1716 4 18 4H19C19.9428 4 20.4142 4 20.7071 4.29289C21 4.58579 21 5.05719 21 6V15C21 15.9428 21 16.4142 20.7071 16.7071C20.4142 17 19.9428 17 19 17Z" stroke="#CCD2E3" stroke-width="2" />
+                    </svg>
+                  </ListItemIcon>
+                  <ListItemText >
+                    <StyledText variant='h7'>Dictionary</StyledText>
+                  </ListItemText>
+                </StyledListItemButton>
+              </StyledListItem>
+              <StyledListItem disablePadding>
+                <StyledListItemButton>
+                  <ListItemIcon>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.44784 8.96942C6.76219 6.14032 9.15349 4 12 4V4C14.8465 4 17.2378 6.14032 17.5522 8.96942L17.804 11.2356C17.8072 11.2645 17.8088 11.279 17.8104 11.2933C17.9394 12.4169 18.3051 13.5005 18.8836 14.4725C18.8909 14.4849 18.8984 14.4973 18.9133 14.5222L19.4914 15.4856C20.0159 16.3599 20.2782 16.797 20.2216 17.1559C20.1839 17.3946 20.061 17.6117 19.8757 17.7668C19.5971 18 19.0873 18 18.0678 18H5.93223C4.91268 18 4.40291 18 4.12434 17.7668C3.93897 17.6117 3.81609 17.3946 3.77841 17.1559C3.72179 16.797 3.98407 16.3599 4.50862 15.4856L5.08665 14.5222C5.10161 14.4973 5.10909 14.4849 5.11644 14.4725C5.69488 13.5005 6.06064 12.4169 6.18959 11.2933C6.19123 11.279 6.19283 11.2645 6.19604 11.2356L6.44784 8.96942Z" stroke="white" />
+                      <path d="M9.10222 18.4059C9.27315 19.1501 9.64978 19.8077 10.1737 20.2767C10.6976 20.7458 11.3396 21 12 21C12.6604 21 13.3024 20.7458 13.8263 20.2767C14.3502 19.8077 14.7269 19.1501 14.8978 18.4059" stroke="white" stroke-linecap="round" />
+                    </svg>
+                  </ListItemIcon>
+                  <ListItemText >
+                    <StyledText variant='h7'>Incidents</StyledText>
+                  </ListItemText>
+                </StyledListItemButton>
+              </StyledListItem>
+              <StyledListItem disablePadding>
+                <StyledListItemButton>
+                  <ListItemIcon>
+                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9023 11.58C18.26 11.77 18.536 12.07 18.7301 12.37C19.1083 12.99 19.0776 13.75 18.7097 14.42L17.9943 15.62C17.6162 16.26 16.911 16.66 16.1855 16.66C15.8278 16.66 15.4292 16.56 15.1022 16.36C14.8365 16.19 14.5299 16.13 14.2029 16.13C13.1911 16.13 12.3429 16.96 12.3122 17.95C12.3122 19.1 11.372 20 10.1968 20H8.80692C7.62145 20 6.68125 19.1 6.68125 17.95C6.66081 16.96 5.81259 16.13 4.80085 16.13C4.46361 16.13 4.15702 16.19 3.90153 16.36C3.5745 16.56 3.16572 16.66 2.81825 16.66C2.08245 16.66 1.37729 16.26 0.99917 15.62L0.29402 14.42C-0.0841044 13.77 -0.104544 12.99 0.273581 12.37C0.437094 12.07 0.743681 11.77 1.09115 11.58C1.37729 11.44 1.56125 11.21 1.73498 10.94C2.24596 10.08 1.93937 8.95 1.07071 8.44C0.0589696 7.87 -0.268057 6.6 0.314459 5.61L0.99917 4.43C1.59191 3.44 2.85913 3.09 3.88109 3.67C4.77019 4.15 5.925 3.83 6.4462 2.98C6.60972 2.7 6.70169 2.4 6.68125 2.1C6.66081 1.71 6.77323 1.34 6.9674 1.04C7.34553 0.42 8.03024 0.02 8.77627 0H10.2172C10.9735 0 11.6582 0.42 12.0363 1.04C12.2203 1.34 12.3429 1.71 12.3122 2.1C12.2918 2.4 12.3838 2.7 12.5473 2.98C13.0685 3.83 14.2233 4.15 15.1226 3.67C16.1344 3.09 17.4118 3.44 17.9943 4.43L18.679 5.61C19.2718 6.6 18.9447 7.87 17.9228 8.44C17.0541 8.95 16.7475 10.08 17.2687 10.94C17.4322 11.21 17.6162 11.44 17.9023 11.58ZM6.60972 10.01C6.60972 11.58 7.9076 12.83 9.51208 12.83C11.1165 12.83 12.3838 11.58 12.3838 10.01C12.3838 8.44 11.1165 7.18 9.51208 7.18C7.9076 7.18 6.60972 8.44 6.60972 10.01Z" fill="white" />
+                    </svg>
+                  </ListItemIcon>
+                  <ListItemText >
+                    <StyledText variant='h7'>Manage</StyledText>
+                  </ListItemText>
+                </StyledListItemButton>
+              </StyledListItem>
+            </List>
+
+
+            {/* <List sx={{ pl: "20px", backgroundColor: "#292F36", gap: "30px" }}>
               <StyledListItem>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M4.54 2H7.92C9.33 2 10.46 3.15 10.46 4.561V7.97C10.46 9.39 9.33 10.53 7.92 10.53H4.54C3.14 10.53 2 9.39 2 7.97V4.561C2 3.15 3.14 2 4.54 2ZM4.54 13.4697H7.92C9.33 13.4697 10.46 14.6107 10.46 16.0307V19.4397C10.46 20.8497 9.33 21.9997 7.92 21.9997H4.54C3.14 21.9997 2 20.8497 2 19.4397V16.0307C2 14.6107 3.14 13.4697 4.54 13.4697ZM19.4601 2H16.0801C14.6701 2 13.5401 3.15 13.5401 4.561V7.97C13.5401 9.39 14.6701 10.53 16.0801 10.53H19.4601C20.8601 10.53 22.0001 9.39 22.0001 7.97V4.561C22.0001 3.15 20.8601 2 19.4601 2ZM16.0801 13.4697H19.4601C20.8601 13.4697 22.0001 14.6107 22.0001 16.0307V19.4397C22.0001 20.8497 20.8601 21.9997 19.4601 21.9997H16.0801C14.6701 21.9997 13.5401 20.8497 13.5401 19.4397V16.0307C13.5401 14.6107 14.6701 13.4697 16.0801 13.4697Z" fill="white" />
@@ -64,7 +143,7 @@ function SideBar() {
                 </svg>
                 <StyledText color='background.primary' variant='h7'>Manage</StyledText>
               </StyledListItem>
-            </List>
+            </List> */}
           </Box>
         </Stack>
         <Stack sx={{ padding: "15px" }}>
